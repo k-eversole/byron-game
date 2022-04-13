@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# the introductory text for the game
 module Instructions
   def instructions
-  <<~HEREDOC
+    <<~HEREDOC
 
 
 
@@ -29,9 +32,9 @@ Are you ready to begin your vacation?
     HEREDOC
   end
 
-   def formatting(description, string)
+  def formatting(description, string)
     {
-      'underline' => "\e[4;1m#{string}\e[0m",
+      'underline' => "\e[4;1m#{string}\e[0m"
     }[description]
   end
 end
